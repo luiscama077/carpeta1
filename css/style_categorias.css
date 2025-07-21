@@ -1,0 +1,234 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#contenedor_general{
+    position: relative;
+}
+
+#imagenfondo{
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: -10;
+}
+
+/*HEADER*/
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    z-index: 5;
+}
+
+header h1{
+    color: red;
+    padding: 20px;
+}
+
+header input{
+    position: absolute;
+    top: 120%;
+    left: 70%;
+    height: 30px;
+    width: 20%;
+    background-color: black;
+    color: white;
+}
+
+nav #menus{
+    display: flex;
+    gap: 10px;
+}
+
+#menus li{
+    position: relative;
+    list-style: none;
+    transition: display;
+}
+
+#menus #submenus{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 200ms ease 100ms;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+
+#menus a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    transition: color 200ms 50ms;
+
+}
+
+#menus>li:hover{
+    border-bottom: 2px solid white;
+}
+
+#menus li:hover #submenus{
+    visibility: visible;
+    opacity: 1;
+}
+
+#menus a:hover{
+    color: red;
+}
+
+/* ASIDE */
+
+#contenedor_principal{
+    display: flex;
+    width: 100vw;
+}
+
+aside{
+    width: 25%;
+    background-color: rgba(0, 0, 0, 0.671);
+    margin: 20px;
+    height: 100%;
+    position: sticky;
+    top: 20px;
+}
+
+aside ul{
+    list-style: none;
+    padding: 20px;
+}
+
+aside ul li a{
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+aside ul a:hover{
+    color: red;
+}
+
+/*MAIN*/
+
+main{
+    width: 75%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.603);
+    margin: 70px 40px;
+    padding: 20px;
+}
+
+main section h3{
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+}
+
+main section #articulos{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+main section figure{
+    flex-basis: 30%;
+    flex-grow: 1;
+    height: 420px;
+    background-color: aliceblue;
+    justify-items: center;
+}
+
+main section #articulos img{
+    width: 100%;
+    height: 300px;
+}
+
+main section #articulos img:hover{
+    border: red solid 2px;
+}
+
+#articulos figure p{
+    color: red;
+    font-size: 25px;
+}
+
+.comprar{
+    background-color: darkred;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 12px;
+    width: 150px;
+    cursor: pointer;
+    transition: backgroun-color 200ms ease 200ms;
+}
+
+.productos figure img:hover{
+    box-shadow: 0 0 10px 4px rgba(139, 0, 0, 0.5);
+}
+
+.comprar:hover{
+    background-color: red;
+}
+
+/* FOOTER */
+
+footer{
+    display: column;
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    color: white;
+
+}
+
+footer > ul{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+footer li{
+    list-style: none;
+}
+
+
+footer .cajas{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+footer .cajas ul li a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.589);
+    font-size: 20px;
+}
+
+footer .cajas ul > *{
+    padding: 10px;
+}
+
+footer div{
+    display: block;
+    justify-items: center;
+}
+
+footer .cajas ul li a:hover{
+    color: white;
+}

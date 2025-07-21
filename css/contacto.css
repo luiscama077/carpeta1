@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#contenedor_general{
+    position: relative;
+}
+
+#imagenfondo{
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: -10;
+}
+
+/*HEADER*/
+
+header{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    z-index: 5;
+}
+
+header h1{
+    color: red;
+    padding: 20px;
+}
+
+header input{
+    position: absolute;
+    top: 120%;
+    left: 70%;
+    height: 30px;
+    width: 20%;
+    background-color: black;
+    color: white;
+}
+
+nav #menus{
+    display: flex;
+    gap: 10px;
+}
+
+#menus li{
+    position: relative;
+    list-style: none;
+    transition: display;
+}
+
+#menus #submenus{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 200ms ease 100ms;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+
+#menus a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    width: 100%;
+    transition: color 200ms 50ms;
+
+}
+
+#menus>li:hover{
+    border-bottom: 2px solid white;
+}
+
+#menus li:hover #submenus{
+    visibility: visible;
+    opacity: 1;
+}
+
+#menus a:hover{
+    color: red;
+}
+
+/* MAIN */
+
+#contacto{
+    width: 70%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.815);
+    border-radius: 10px;
+}
+
+#contacto h2{
+    text-align: center;
+    color: rgb(172, 172, 172);
+}
+
+#datos{
+    display: flex;
+    flex-direction: column;
+}
+
+#datos label{
+    margin-bottom: 5px;
+    color: rgb(184, 184, 184);
+}
+
+#datos input,
+#datos textarea{
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+#datos input:focus,
+#datos textarea:focus{
+    border-color: red ;
+    outline: none;
+
+}
+
+#datos button{
+    padding: 10px 20px;
+    background-color: darkred;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.4s ease;
+}
+
+#datos button:hover{
+    background-color: red;
+}
+
+
+/* FOOTER */
+
+footer{
+    display: column;
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    color: white;
+
+}
+
+footer > ul{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+footer li{
+    list-style: none;
+}
+
+
+footer .cajas{
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+footer .cajas ul li a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.589);
+    font-size: 20px;
+}
+
+footer .cajas ul > *{
+    padding: 10px;
+}
+
+footer div{
+    display: block;
+    justify-items: center;
+}
+
+footer .cajas ul li a:hover{
+    color: white;
+}
